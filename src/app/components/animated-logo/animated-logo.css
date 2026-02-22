@@ -1,4 +1,4 @@
-/* Hacemos que el componente ocupe todo el espacio de su contenedor padre */
+/* 1. Contenedores adaptables */
 :host {
   display: block;
   width: 100%;
@@ -13,10 +13,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  /* El fondo ya no es negro sólido para que se vea el gradiente global */
+  background: transparent !important; 
 }
 
+/*2. Mascara lineal*/
 .alh-canvas {
   position: absolute;
   inset: 0;
@@ -24,8 +24,11 @@
   height: 100%;
   display: block;
   pointer-events: none; 
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
 }
 
+/* 3. Logo (Sombra estática, SIN animación en bucle) */
 .alh-logo {
   position: relative;
   z-index: 2;
@@ -34,19 +37,14 @@
   height: auto;
   object-fit: contain;
   pointer-events: none;
+  background: transparent !important;
   will-change: filter, transform;
   
-  /* Tus filtros originales */
+  /* Sombra base */
   filter: drop-shadow(0 0 6px rgba(76, 235, 91, 0.55)) drop-shadow(0 0 18px rgba(76, 235, 91, 0.25));
-  animation: alh-pulso-logo 2.8s ease-in-out infinite;
 }
 
-/* --- TUS KEYFRAMES ORIGINALES --- */
-@keyframes alh-pulso-logo {
-  0%, 100% { filter: drop-shadow(0 0 5px rgba(76, 235, 91, 0.40)) drop-shadow(0 0 14px rgba(76, 235, 91, 0.18)); }
-  50% { filter: drop-shadow(0 0 12px rgba(76, 235, 91, 0.90)) drop-shadow(0 0 30px rgba(76, 235, 91, 0.50)) drop-shadow(0 0 55px rgba(76, 235, 91, 0.22)); }
-}
-
+/* 4. Animación de impacto (Solo se activa por el TypeScript al pasar el ratón) */
 @keyframes alh-impacto-logo {
   0% { transform: scale(1); filter: drop-shadow(0 0 5px rgba(76, 235, 91, 0.40)) drop-shadow(0 0 14px rgba(76, 235, 91, 0.18)); }
   28% { transform: scale(1.09); filter: drop-shadow(0 0 20px rgba(76, 235, 91, 1.00)) drop-shadow(0 0 45px rgba(76, 235, 91, 0.70)) drop-shadow(0 0 80px rgba(76, 235, 91, 0.35)); }
@@ -55,7 +53,6 @@
   100% { transform: scale(1); filter: drop-shadow(0 0 5px rgba(76, 235, 91, 0.40)) drop-shadow(0 0 14px rgba(76, 235, 91, 0.18)); }
 }
 
-/* Esta clase se añadirá mediante TypeScript cuando acerques el mouse */
 .alh-impacto {
   animation: alh-impacto-logo 0.48s cubic-bezier(0.36, 0.07, 0.19, 0.97) forwards !important;
 }

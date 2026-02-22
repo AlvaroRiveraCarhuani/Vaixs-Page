@@ -18,9 +18,11 @@ const aleatorioInt = (a: number, b: number) => Math.floor(aleatorio(a, b + 1));
 
 @Component({
   selector: 'app-animated-logo',
-  templateUrl: './animated-logo.component.html',
-  styleUrls: ['./animated-logo.component.css']
+  standalone: true,
+  templateUrl: './animated-logo.html', 
+  styleUrls: ['./animated-logo.css']   
 })
+
 export class AnimatedLogoComponent implements AfterViewInit, OnDestroy {
   // Capturamos los elementos del HTML
   @ViewChild('canvasRef') canvasRef!: ElementRef<HTMLCanvasElement>;

@@ -4,8 +4,8 @@ import { AnimatedLogoComponent } from '../animated-logo/animated-logo';
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [AnimatedLogoComponent], // <-- Conectamos el logo
+  imports: [AnimatedLogoComponent],
   templateUrl: './hero.html',
-  styleUrls: ['./hero.css'] // <-- Cambiar a .css
+  styleUrls: ['./hero.css']
 })
 export class HeroComponent {}
