@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+/* src/styles.scss */
+
+:root {
+  --color-primary-green: #1ed760;
+  --color-bg-dark: #0a110d;
+  --color-bg-darker: #030805;
+  --color-text-white: #ffffff;
+  --color-text-gray: #b3b3b3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at top right, #0d3b1b 0%, var(--color-bg-darker) 60%);
+  color: var(--color-text-white);
+  overflow-x: hidden;
+}
+
+.text-green {
+  color: var(--color-primary-green);
+}
