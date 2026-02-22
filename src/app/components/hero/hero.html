@@ -1,18 +1,28 @@
-<section class="hero-container">
+<section id="inicio" class="hero-container">
   <div class="hero-content">
-    <h1 class="hero-title">
-      Creamos <br>
-      <span class="text-green">Software</span> <br>
-      que <span class="text-green">Escala</span>
-    </h1>
-    <p class="hero-description">
-      Desarrollamos aplicaciones web, móviles y cloud robustas, seguras y listas para crecer a largo plazo.
-    </p>
     
-    <div class="hero-actions">
-      <button class="btn btn-primary">Nuestros Servicios</button>
-      <button class="btn btn-outline">Ver Productos</button>
+    <div class="slider-container">
+      <div *ngFor="let slide of slides; let i = index" 
+           class="slide" 
+           [class.active]="i === currentSlide">
+        <h1 class="hero-title" [innerHTML]="slide.title"></h1>
+        <p class="hero-description">{{ slide.desc }}</p>
+      </div>
     </div>
+    <div class="hero-actions">
+      <a href="#servicios" class="btn btn-primary" style="text-decoration: none; text-align: center;">Nuestros Servicios</a>
+      <a href="#productos" class="btn btn-outline" style="text-decoration: none; text-align: center;">Ver Productos</a>
+    </div>
+
+    <div class="slider-controls">
+      <button *ngFor="let slide of slides; let i = index"
+              class="dot"
+              [class.active]="i === currentSlide"
+              (click)="setSlide(i)"
+              aria-label="Cambiar slide">
+      </button>
+    </div>
+
   </div>
 
   <div class="hero-visual">

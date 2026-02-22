@@ -1,0 +1,157 @@
+.main-footer {
+  background-color: #030303; 
+  color: #e0e0e0;
+  padding: 80px 5% 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+/* --- COLUMNA DE MARCA --- */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.brand-icon { width: 45px; height: auto; }
+.brand-text { display: flex; flex-direction: column; }
+.brand-title { color: #ffffff; font-weight: 800; font-size: 1.2rem; letter-spacing: 2px; line-height: 1; }
+.brand-subtitle { color: #a0a0a0; font-size: 0.6rem; letter-spacing: 1px; font-weight: 600; }
+
+.brand-desc {
+  color: #a0a0a0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  max-width: 320px;
+}
+
+.social-links {
+  margin-top: 15px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0.05); 
+  color: #e0e0e0;
+  border-radius: 50%; 
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: #4ceb5b; 
+  color: #050505; 
+  transform: translateY(-4px); 
+  box-shadow: 0 6px 15px rgba(76, 235, 91, 0.4); 
+  border-color: #4ceb5b;
+}
+
+/* --- COLUMNAS DE ENLACES --- */
+.footer-col h3 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-links a {
+  color: #a0a0a0;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+.footer-links a:hover { color: #4ceb5b; }
+
+/* --- CONTACTO --- */
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #a0a0a0;
+  font-size: 0.95rem;
+}
+.contact-info svg { color: #4ceb5b; }
+
+/* --- FOOTER BOTTOM --- */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: #707070;
+  font-size: 0.85rem;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 20px;
+}
+.footer-legal a {
+  color: #707070;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer-legal a:hover { color: #ffffff; }
+
+/* --- WHATSAPP FLOTANTE --- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25d366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 900px) {
+  .footer-content { grid-template-columns: 1fr 1fr; gap: 40px 20px; }
+  .brand-col { grid-column: 1 / -1; }
+}
+@media (max-width: 600px) {
+  .footer-content { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; gap: 15px; text-align: center; }
+}

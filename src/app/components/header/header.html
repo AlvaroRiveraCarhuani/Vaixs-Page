@@ -7,13 +7,18 @@
     </div>
   </div>
 
-  <nav class="nav-links">
-    <a href="#inicio" class="active">Inicio</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#productos">Productos</a>
-  </nav>
+  <button class="mobile-menu-btn" (click)="toggleMenu()" [class.active]="isMenuOpen">
+    <span></span><span></span><span></span>
+  </button>
 
-  <div class="header-actions">
-    <button class="btn-contacto">Contacto</button>
+  <div class="nav-container" [class.open]="isMenuOpen">
+    <nav class="nav-links">
+      <a href="#inicio" (click)="closeMenu()">Inicio</a>
+      <a href="#servicios" (click)="closeMenu()">Servicios</a>
+      <a href="#productos" (click)="closeMenu()">Productos</a>
+    </nav>
+    <div class="header-actions">
+      <a href="#contacto" class="btn-contacto" (click)="closeMenu()">Contacto</a>
+    </div>
   </div>
 </header>

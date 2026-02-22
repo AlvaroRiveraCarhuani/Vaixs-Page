@@ -40,7 +40,7 @@
 
 /* --- DISEÑO DE LAS TARJETAS --- */
 .service-card {
-  background: rgba(255, 255, 255, 0.03); /* Fondo tipo cristal muy oscuro */
+  background: rgba(255, 255, 255, 0.03); 
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 16px;
   padding: 40px 30px;
@@ -51,9 +51,9 @@
 }
 
 .service-card:hover {
-  transform: translateY(-8px); /* Se levanta un poco */
-  border-color: rgba(76, 235, 91, 0.4); /* El borde se pinta de verde */
-  box-shadow: 0 10px 30px rgba(76, 235, 91, 0.05); /* Sombra verde sutil */
+  transform: translateY(-8px); 
+  border-color: rgba(76, 235, 91, 0.4);
+  box-shadow: 0 10px 30px rgba(76, 235, 91, 0.05); 
   background: rgba(255, 255, 255, 0.05);
 }
 
@@ -61,7 +61,7 @@
 .icon-wrapper {
   width: 50px;
   height: 50px;
-  background: rgba(76, 235, 91, 0.1); /* Círculo verde transparente de fondo */
+  background: rgba(76, 235, 91, 0.1); 
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -73,7 +73,7 @@
 
 .service-card:hover .icon-wrapper {
   background: #4ceb5b;
-  color: #050505; /* El icono se vuelve oscuro y el fondo verde */
+  color: #050505; 
   box-shadow: 0 0 15px rgba(76, 235, 91, 0.5);
 }
 
@@ -95,4 +95,30 @@
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    padding: 60px 5%; 
+  }
+
+  .services-header h2 {
+    font-size: 2.2rem; 
+  }
+
+  .services-header p {
+    font-size: 1rem;
+    padding: 0 10px; 
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr; 
+    gap: 20px; 
+  }
+
+  .service-card {
+    padding: 30px 20px; 
+    width: 100%;
+    box-sizing: border-box; 
+  }
 }
