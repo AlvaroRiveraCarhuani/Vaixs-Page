@@ -1,0 +1,107 @@
+.main-header {
+  display: flex;
+  align-items: center; 
+  padding: 15px 5%;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  
+  background: rgba(10, 10, 10, 0.45); 
+  backdrop-filter: blur(12px); 
+  -webkit-backdrop-filter: blur(12px); 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+}
+
+/* --- LOGO Y MARCA --- */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-right: auto; 
+}
+
+.brand-icon {
+  width: 45px;
+  height: auto;
+  filter: drop-shadow(0 2px 4px rgba(76, 235, 91, 0.3));
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.brand-subtitle {
+  color: #a0a0a0;
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* --- 2. SUBRAYADO ANIMADO EN NAVEGACIÓN --- */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  margin-right: 40px; 
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  position: relative; 
+  padding-bottom: 5px; 
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffffff;
+}
+
+/* La línea invisible que está esperando */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%; 
+  height: 2px; 
+  background-color: #4ceb5b; 
+  transition: width 0.3s ease-in-out; 
+  border-radius: 2px;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* --- BOTÓN CONTACTO --- */
+.btn-contacto {
+  background-color: transparent;
+  border: 1px solid #4ceb5b;
+  color: #ffffff;
+  padding: 8px 24px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-contacto:hover {
+  background-color: #4ceb5b;
+  color: #0a0a0a;
+}
