@@ -1,0 +1,98 @@
+.services-section {
+  padding: 100px 5%;
+  background-color: #050505; 
+  color: #fff;
+}
+
+/* --- CABECERA DE LA SECCIÓN --- */
+.services-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+}
+
+.services-header h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.text-gradient {
+  color: #4ceb5b;
+  background: linear-gradient(90deg, #4ceb5b, #1bb538);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.services-header p {
+  color: #a0a0a0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* --- GRID DE TARJETAS --- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* --- DISEÑO DE LAS TARJETAS --- */
+.service-card {
+  background: rgba(255, 255, 255, 0.03); /* Fondo tipo cristal muy oscuro */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 40px 30px;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.service-card:hover {
+  transform: translateY(-8px); /* Se levanta un poco */
+  border-color: rgba(76, 235, 91, 0.4); /* El borde se pinta de verde */
+  box-shadow: 0 10px 30px rgba(76, 235, 91, 0.05); /* Sombra verde sutil */
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* --- ÍCONOS SVG --- */
+.icon-wrapper {
+  width: 50px;
+  height: 50px;
+  background: rgba(76, 235, 91, 0.1); /* Círculo verde transparente de fondo */
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  color: #4ceb5b;
+  transition: all 0.4s ease;
+}
+
+.service-card:hover .icon-wrapper {
+  background: #4ceb5b;
+  color: #050505; /* El icono se vuelve oscuro y el fondo verde */
+  box-shadow: 0 0 15px rgba(76, 235, 91, 0.5);
+}
+
+.icon-wrapper svg {
+  width: 26px;
+  height: 26px;
+}
+
+/* --- TEXTOS DE LA TARJETA --- */
+.service-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.service-card p {
+  color: #a0a0a0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
