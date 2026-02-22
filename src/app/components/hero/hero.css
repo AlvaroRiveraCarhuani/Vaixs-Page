@@ -1,0 +1,26 @@
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80vh;
+  padding: 0 5%;
+  margin-top: 50px;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.hero-visual {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* Empuja la animación a la derecha */
+}
+
+/* Tipografía y botones básicos */
+.hero-title { font-size: 4rem; line-height: 1.1; margin-bottom: 20px; }
+.hero-description { font-size: 1.2rem; color: var(--color-text-gray); margin-bottom: 40px; }
+.btn { padding: 15px 30px; border-radius: 30px; border: none; font-size: 1rem; cursor: pointer; font-weight: bold; margin-right: 15px;}
+.btn-primary { background-color: var(--color-primary-green); color: white; }
+.btn-outline { background-color: transparent; border: 2px solid var(--color-primary-green); color: var(--color-primary-green); }
